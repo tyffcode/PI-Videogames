@@ -1,0 +1,11 @@
+.landing-page {
+  background-image: url("https://img.freepik.com/vector-premium/banderas-paises-hermosos-brillantes-colores-fondo-sombras_592231-12.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
