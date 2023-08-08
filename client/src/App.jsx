@@ -1,20 +1,26 @@
 import { Route, Routes } from "react-router-dom";
 
-import LandingPage from "./ViewsComponentes/LandingPage/landingpage";
-import Home from "./ViewsComponentes/Home/home";
-import Detail from "./ViewsComponentes/Detail/detail";
-import Form from "./ViewsComponentes/Create-form/form";
-import "./App.css";
+import LandingPage from "./views/LandingPage/LandingPage";
+import Home from "./views/Home/home"
+import Create from "./views/Create/Create";
+import Detail from "./views/Detail/Detail"; 
+
+//import axios from "axios"
+
+//axios.defaults.baseURL= "https://deploy-pi-production-46cb.up.railway.app"
 
 function App() {
   return (
-    <div>
+
+    <div className="App">
+
       <Routes>
-        <Route exact path="/" element={<LandingPage />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/countries/:id" element={<Detail />} />
-        <Route path="/form" element={<Form />} />
+        <Route exact path="/home" element={<Home/>}/>
+        <Route path="/" element={<LandingPage/>}/>
+        <Route path="/create" element={<Create/>}/>
+        <Route path="/detail/:detailId" element={<Detail/>}/>
       </Routes>
+      
     </div>
   );
 }
