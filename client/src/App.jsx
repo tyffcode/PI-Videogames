@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
 import LandingPage from "./views/LandingPage/LandingPage";
-import Home from "./views/Home/home"
+import Home from "./views/Home/Home"
 import Create from "./views/Create/Create";
 import Detail from "./views/Detail/Detail"; 
 
