@@ -76,4 +76,4 @@ const getAllGames = () => {
   return allInfo;
 };
 
-module.exports = { getAllGames, getVideoGameDb };
+module.exports = { getAllGames, getVideoGameDb };

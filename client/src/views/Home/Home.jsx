@@ -1,12 +1,12 @@
 import React from "react";
 import Cards from "../../Components/Cards/Cards";
-import { getAllGames } from "../../redux/actions";
+import Nav from "../../Components/Nav/Nav";
+
+import { getAllGames, getGenres } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import style from "./Home.module.css";
 
-import SearchBar from "../../Components/SearchBar/SearchBar";
-import Nav from "../../Components/Nav/Nav";
 
 function Home() {
   const videoGames = useSelector((state) => state.videoGames);
@@ -16,6 +16,7 @@ function Home() {
 
   useEffect(() => {
     dispatch(getAllGames()).then((res) => setLoading(false));
+    dispatch(getGenres());
   }, [dispatch]);
 
   const gamesPage = 15; // Establecer aquí la cantidad de juegos por página.
@@ -49,7 +50,7 @@ function Home() {
   return (
     <div className={style.landing}>
       <Nav/>
-      <SearchBar/>
+      
       <div className={style.paginado}>
         <button className={style.unButton} onClick={prev}>
           PREV
