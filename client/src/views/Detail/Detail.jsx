@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 const Detail = () => {
   let { detailId } = useParams();
-  detailId = Number(detailId);
 
   const detail = useSelector((state) => state.gameDetail);
   console.log(detail);
@@ -47,7 +46,9 @@ const Detail = () => {
               {detail.created === true ? <Link to="/home"></Link> : <div></div>}
             </>
           ) : (
-            <h1>im loading</h1>
+            <div>
+              <h1>I'm loading</h1>
+            </div>
           )}
         </div>
       </div>

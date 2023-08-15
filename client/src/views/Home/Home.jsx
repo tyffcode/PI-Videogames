@@ -30,6 +30,7 @@ function Home() {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+  
   //
 
   const pageNumbers = [];
@@ -70,12 +71,13 @@ function Home() {
       </div>
       <div className={style.main}>
         {loading ? (
-          <div>
-            <h1>im loading</h1>
+          <div className={style.loadingContainer}>
             <img
-              src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=6c09b952542dzbun2w1r7f3dk1x94igjth33h99grfpijkha&ep=v1_gifs_search&rid=200w.gif&ct=g"
+              src="https://cdn.dribbble.com/users/121337/screenshots/1024835/loading2.gif"
               alt="Cargando..."
+              className={style.loadingImage}
             />
+            {/* <h1  className={style.loadingText}>LOADING</h1> */}
           </div>
         ) : (
           <div className={style.cardsContainer}>
@@ -83,23 +85,6 @@ function Home() {
           </div>
         )}
       </div>
-      {/* <div className={style.paginado}>
-        <button className={style.unButtonAbajo} onClick={prev}>
-          PREV
-        </button>
-        {pageNumbers.map((number) => (
-          <button
-            className={style.unButtonAbajo}
-            key={number}
-            onClick={() => handlePageChange(number)}
-          >
-            {number}
-          </button>
-        ))}
-        <button className={style.unButtonAbajo} onClick={next}>
-          NEXT
-        </button>
-      </div> */}
     </div>
   );
 }

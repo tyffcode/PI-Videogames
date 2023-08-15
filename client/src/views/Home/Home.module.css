@@ -1,29 +1,53 @@
-.paginado{
-    margin: 30px;
+/* Estilos para el paginado creativo con botones más grandes */
+.paginado {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.paginado > .buttonPaginado{
-    margin: 1px;
-    color: rgba(255, 255, 255, 0.62);
-  background-color:#1d2b3a ;
-  border-radius: 5px;
-  padding: 10px;
+.paginado > .buttonPaginado,
+.unButton {
+  margin: 10px;
+  color: #fff;
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
-
-.unButton{
-    margin: 1px;
-    color: rgba(255, 255, 255, 0.551);
-  background-color:#06376c ;
-  border-radius: 5px;
-  padding: 10px;
-  cursor: pointer;
-
-
+.paginado > .buttonPaginado:hover,
+.unButton:hover {
+  background-color: #3d3d3d;
+  transform: scale(1.1);
 }
 
+/* Estilos para el botón especial */
+.unButton {
+  background-color: #ff6f00;
+}
 
-.mensaje{
-  color: white;
+/* Estilos para el loading */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding-top: 20px; /* Añadido para dar espacio en la parte superior */
+}
+
+.loadingImage {
+  width: 600px; /* Cambia el valor según el tamaño deseado */
+  height: auto;
+  margin-top: 5px;
 }

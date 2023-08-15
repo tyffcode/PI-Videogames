@@ -1,0 +1,75 @@
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Usar min-height para asegurar que el contenido no se corte */
+    background-color: rgba(0, 0, 0, 0.5); /* Agregar un fondo semitransparente si es necesario */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Mantener la imagen fija mientras se desplaza */
+}
+
+.full-screen-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para la imagen de fondo */
+.backgroundImage {
+    position: fixed; /* Aplicar la propiedad position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Estilos para el botón "Start Game" */
+.a {
+    margin-top: 100px;
+    position: relative;
+    background: linear-gradient(to bottom, #ff5e00, #ff1c6a); /* Cambiar el fondo a un gradiente */
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    padding: 15px 40px; /* Aumentar el espacio interno */
+    border: none; /* Eliminar el borde */
+    border-radius: 30px; /* Agregar un borde redondeado */
+    transition: 0.5s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+    font-family: 'Nunito', sans-serif; /* Cambiar la tipografía */
+}
+
+.a:hover {
+    letter-spacing: 0.25em;
+    background: linear-gradient(to bottom, #ff1c6a, #ff5e00); /* Cambiar el gradiente en el hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Aumentar la sombra en el hover */
+}
+
+.a::before,
+.a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.1); /* Agregar una capa semitransparente */
+    border-radius: 30px; /* Coincidir con el borde del botón */
+    opacity: 0; /* Ocultar inicialmente */
+    transition: 0.5s;
+}
+
+.a:hover::before,
+.a:hover::after {
+    opacity: 1; /* Mostrar en el hover */
+}

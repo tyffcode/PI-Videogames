@@ -97,7 +97,8 @@ const Create = () => {
         genres: [],
       });
       dispatch(getAllGames());
-      alert(postGame.data.message);
+      const game = postGame.data
+      alert(`Videojuego creado exitosamente`);
     }
   };
 
